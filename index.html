@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMasterpro Co. - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="login-container" id="loginSection">
+        <h2>TaskMaster Co. Login</h2>
+        <img src="logo.png" alt="TaskMaster Co. Logo" class="logo">
+        <input type="text" id="username" placeholder="Enter username (admin)">
+        <input type="password" id="password" placeholder="Enter password (admin123)">
+        <button onclick="login()">Login</button>
+    </div>
+
+    <div class="container" id="dashboardSection" style="display: none;">
+        <h2 id="dashboardTitle"></h2>
+        <button onclick="logout()">Logout</button>
+        <h3>Task Management</h3>
+        <input type="text" id="taskInput" placeholder="Add a new task...">
+        <button onclick="addTask()">Create Task</button>
+
+        <div class="task-columns">
+            <div class="column">
+                <h3>Task Assigned</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>S No.</th>
+                            <th>Task</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="taskAssignedBody">
+                        <!-- Assigned tasks will appear here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="column">
+                <h3>Ongoing Task</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>S No.</th>
+                            <th>Task</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="taskOngoingBody">
+                        <!-- Ongoing tasks will appear here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="column">
+                <h3>Task Completed</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>S No.</th>
+                            <th>Task</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="taskCompletedBody">
+                        <!-- Completed tasks will appear here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="jscript.js"></script>
+
+</body>
+</html>
